@@ -56,15 +56,13 @@
 		
 	});
 
-
 	if(initData.length >= 1) {
 		console.log(initData)
+		var index = initData.length-1;
+		$memo.val(initData[index].value);
 		// app.collection.set( initData );
-		$memo.val(initData[(initData.length-1)].value)
 	}
-
-})(jQuery, NoteApp);
-
+})(jQuery,NoteApp)
 (function(app){
 
 
@@ -156,8 +154,8 @@ var NoteApp = {
 
 
   app.$wrap.on('addCollection', app.util.storage.save);
-  app.$wrap.on('removeCollection', app.util.storage.save);
-  app.$wrap.on('checkCollection', app.util.storage.save);
+  // app.$wrap.on('removeCollection', app.util.storage.save);
+  // app.$wrap.on('checkCollection', app.util.storage.save);
 
 })(NoteApp);
 
